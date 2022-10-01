@@ -40,4 +40,3 @@ const num = 12345678901234567890n;
 
 console.log(num);
 
-console.log(test);
