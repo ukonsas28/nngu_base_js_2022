@@ -66,3 +66,38 @@ const userRole = "manager";
 //     console.log("Это manager, и он любит кофе");
 //     break;
 // }
+
+// let result3 = false || 0 || "" || "fffff" || 0;
+// console.log(result3);
+
+// const a = 100;
+// const b = 20;
+// const c = 3;
+
+// if (a < b && b < c) {
+//   console.log("C самый большой");
+// } else if (a < b && b > c) {
+//   console.log("B самый большой");
+// } else if (a < c) {
+//   console.log("C самый большой");
+// } else {
+//   console.log("A самый большой");
+// }
+
+const temp = -30;
+
+if (temp <= -30) {
+  console.log("оставайся дома");
+} else if (temp > -30 && temp <= -10) {
+  console.log("сегодня холодно");
+} else if (temp > -10 && temp <= 5) {
+  console.log("не холодно");
+} else if (temp > 5 && temp <= 15) {
+  console.log("тепло");
+} else if (temp > 15 && temp <= 25) {
+  console.log("очень тепло");
+} else if (temp > 25 && temp < 35) {
+  console.log("жарко");
+} else {
+  console.log("пекло");
+}
