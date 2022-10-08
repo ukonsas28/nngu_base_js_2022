@@ -70,19 +70,17 @@ const userRole = "manager";
 // let result3 = false || 0 || "" || "fffff" || 0;
 // console.log(result3);
 
-// const a = 100;
-// const b = 20;
-// const c = 3;
+const a = 100;
+const b = 204;
+const c = 35;
 
-// if (a < b && b < c) {
-//   console.log("C самый большой");
-// } else if (a < b && b > c) {
-//   console.log("B самый большой");
-// } else if (a < c) {
-//   console.log("C самый большой");
-// } else {
-//   console.log("A самый большой");
-// }
+if (a > b && a > c) {
+  console.log("A самый большой");
+} else if (b > a && b > c) {
+  console.log("B самый большой");
+} else {
+  console.log("C самый большой");
+}
 
 // const temp = -30;
 
@@ -147,8 +145,10 @@ const count = 5;
 // for (let i = 0; i < count; i += 1) {
 //   console.log(text);
 // }
-let i = 0;
-while (i < count) {
-  console.log(text);
-  i += 1;
-}
+// let i = 0;
+// while (i < count) {
+//   console.log(text);
+//   i += 1;
+// }
+// const a = -3;
+// console.log(2 < a && a < 5);
