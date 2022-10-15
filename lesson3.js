@@ -152,3 +152,14 @@ const count = 5;
 // }
 // const a = -3;
 // console.log(2 < a && a < 5);
+
+let N = 100;
+const M = 10;
+let i = 0;
+
+while (M < N) {
+  N = N / 2;
+  i += 1;
+}
+
+console.log(i);
