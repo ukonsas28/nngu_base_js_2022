@@ -70,17 +70,17 @@ const userRole = "manager";
 // let result3 = false || 0 || "" || "fffff" || 0;
 // console.log(result3);
 
-const a = 100;
-const b = 204;
-const c = 35;
+// const a = 100;
+// const b = 204;
+// const c = 35;
 
-if (a > b && a > c) {
-  console.log("A самый большой");
-} else if (b > a && b > c) {
-  console.log("B самый большой");
-} else {
-  console.log("C самый большой");
-}
+// if (a > b && a > c) {
+//   console.log("A самый большой");
+// } else if (b > a && b > c) {
+//   console.log("B самый большой");
+// } else {
+//   console.log("C самый большой");
+// }
 
 // const temp = -30;
 
@@ -138,9 +138,9 @@ if (a > b && a > c) {
 // }
 // console.log(result);
 
-const text = "My text";
+// const text = "My text";
 
-const count = 5;
+// const count = 5;
 
 // for (let i = 0; i < count; i += 1) {
 //   console.log(text);
@@ -153,13 +153,23 @@ const count = 5;
 // const a = -3;
 // console.log(2 < a && a < 5);
 
-let N = 100;
-const M = 10;
-let i = 0;
+// let N = 100;
+// const M = 10;
+// let i = 0;
 
-while (M < N) {
-  N = N / 2;
-  i += 1;
+// while (M < N) {
+//   N = N / 2;
+//   i += 1;
+// }
+
+// console.log(i);
+
+let count = 0;
+
+for (let i = 1800; i < 2022; i += 1) {
+  if (i % 4 === 0) {
+    count += 1;
+  }
 }
 
-console.log(i);
+console.log(count);
