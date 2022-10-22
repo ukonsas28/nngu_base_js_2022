@@ -129,21 +129,110 @@
 // showString("Hello World", 2);
 // showString("Привет МИР", 5);
 
-const isVowel = (letter) => {
-  if (
-    letter === "а" ||
-    letter === "у" ||
-    letter === "о" ||
-    letter === "ы" ||
-    letter === "э" ||
-    letter === "я" ||
-    letter === "ю" ||
-    letter === "и" ||
-    letter === "е"
-  ) {
+// const isVowel = (letter) => {
+//   if (
+//     letter === "а" ||
+//     letter === "у" ||
+//     letter === "о" ||
+//     letter === "ы" ||
+//     letter === "э" ||
+//     letter === "я" ||
+//     letter === "ю" ||
+//     letter === "и" ||
+//     letter === "е"
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// const a = isVowel("и");
+
+// if (isVowel("и")) {
+//   console.log("good");
+// } else {
+//   console.log("no good");
+// }
+
+//HOME WORK
+
+//10
+
+const getDigitsSum = (num) => {
+  const str = `${num}`;
+  let result = 0;
+
+  for (let i = 0; i < str.length; i += 1) {
+    result += +str[i];
+  }
+
+  return result;
+};
+
+// console.log(getDigitsSum(123));
+
+//11
+
+const filterYears = () => {
+  const result = [];
+  for (let i = 1; i < 2020; i += 1) {
+    if (getDigitsSum(i) === 13) {
+      result.push(i);
+    }
+  }
+
+  return result;
+};
+
+// console.log(filterYears());
+
+//12
+
+const isEven = (num) => {
+  if (num % 2 === 0) {
     return true;
   }
   return false;
 };
-console.log(isVowel("и"));
-console.log(isVowel("д"));
+
+// console.log(isEven(7));
+// console.log(isEven(12));
+
+//13
+
+const filterArr = (arr) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (isEven(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+};
+
+// console.log(filterArr([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+//15
+const lessNine = (num) => {
+  console.log(`Функция lessNine вызванна с параметром ${num}`);
+  if (getDigitsSum(num) > 9) {
+    return lessNine(getDigitsSum(num));
+  }
+  return getDigitsSum(num);
+};
+
+console.log(lessNine(156957565523));
+
+//15 второе решение
+
+const sumDigital = (n) => {
+  let newn = getDigitsSum(n);
+  while (newn >= 10) {
+    newn = getDigitsSum(newn);
+  }
+  return newn;
+};
+
+console.log(sumDigital(11973));
