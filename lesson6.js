@@ -77,16 +77,65 @@
 // };
 // console.log(initSnake("CurrentUserSecondName"));
 
-const getSubstr = (str, char, pos = "before") => {
-  if (str.includes(char)) {
-    if (pos === "before") {
-      return str.slice(0, str.indexOf(char));
-    }
-    if (pos === "after") {
-      return str.slice(str.indexOf(char));
-    }
-  }
-  return `Символ ${char} отсутствует в строке ${str}`;
-};
+// const getSubstr = (str, char, pos = "before") => {
+//   if (str.includes(char)) {
+//     if (pos === "before") {
+//       return str.slice(0, str.indexOf(char));
+//     }
+//     if (pos === "after") {
+//       return str.slice(str.indexOf(char));
+//     }
+//   }
+//   return `Символ ${char} отсутствует в строке ${str}`;
+// };
 
-console.log(getSubstr("My name Alex!", "b", "after"));
+// console.log(getSubstr("My name Alex!", "b", "after"));
+
+//cw
+
+// const names = [{ name: "Alex" }, { name: "Ivan" }, { name: "Tony" }];
+
+// const findElem = names.find((el) => el.name === "Tony" || el.name === "Ivan");
+
+// console.log(findElem);
+
+// const names = [{ name: "Alex" }, { name: "Ivan" }, { name: "Tony" }];
+
+// const filterArr = names.filter(
+//   (el, i) => (el.name === "Tony" || el.name === "Alex") && i !== 0
+// );
+
+// console.log(filterArr);
+
+// const names = [{ name: "Alex" }, { name: "Ivan" }, { name: "Tony" }];
+
+// const mapArr = names.map((el) => ({ name: el.name, handCout: 2 }));
+
+// console.log(mapArr);
+
+// const names = [{ name: "Alex" }, { name: "Ivan" }, { name: "Tony" }];
+// console.log(names);
+
+// const arr = names.forEach((el) => (el.name = "Unknown"));
+
+// console.log(arr);
+// console.log(names);
+
+// const names = [{ name: "Alex" }, { name: "Ivan" }, { name: "Tony" }];
+// console.log(names);
+
+// const arr = names.map(() => ({ name: "Unknown" }));
+
+// console.log(arr);
+// console.log(names);
+
+const arr = [1, -2, 5, -6, 9, -8, 5];
+
+const result = arr.reduce((prev, cur) => {
+  if (cur > 0) {
+    return prev + cur;
+  }
+  return prev;
+});
+
+console.log(result);
