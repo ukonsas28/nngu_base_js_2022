@@ -129,13 +129,28 @@
 // console.log(arr);
 // console.log(names);
 
-const arr = [1, -2, 5, -6, 9, -8, 5];
+// const arr = [10, -2, -5, 6, 9, -8, -5];
 
-const result = arr.reduce((prev, cur) => {
-  if (cur > 0) {
-    return prev + cur;
-  }
-  return prev;
-});
+// const result = arr.reduce((prev, cur) => {
+//   if (cur > 0) {
+//     return prev + cur;
+//   }
+//   return prev;
+// }, 100);
 
-console.log(result);
+// console.log(result);
+
+// const positiveEvenSum = (arr) =>
+//   arr.reduce((prev, cur) => {
+//     if (cur % 2 === 0 && cur > 0) {
+//       return prev + cur;
+//     }
+//     return prev;
+//   }, 0);
+
+// console.log(positiveEvenSum([1, 2, -3, -4, 5, 6]));
+
+const positiveEvenSum = (arr) =>
+  arr.filter((el) => el > 0 && el % 2 === 0).reduce((prev, cur) => prev + cur);
+
+console.log(positiveEvenSum([1, 2, -3, -4, 5, -6]));
