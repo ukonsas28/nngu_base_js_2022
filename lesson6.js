@@ -150,7 +150,40 @@
 
 // console.log(positiveEvenSum([1, 2, -3, -4, 5, 6]));
 
-const positiveEvenSum = (arr) =>
-  arr.filter((el) => el > 0 && el % 2 === 0).reduce((prev, cur) => prev + cur);
+// const positiveEvenSum = (arr) =>
+//   arr.filter((el) => el > 0 && el % 2 === 0).reduce((prev, cur) => prev + cur);
 
-console.log(positiveEvenSum([1, 2, -3, -4, 5, -6]));
+// console.log(positiveEvenSum([1, 2, -3, -4, 5, -6]));
+
+// const arr = [1, 2, 1, 3, 4, 5, 2, 3];
+
+function uniqArrItem(itemArray) {
+  const result = [];
+
+  for (let i = 0; i < itemArray.length; i += 1) {
+    if (!result.includes(itemArray[i])) {
+      result.push(itemArray[i]);
+    }
+  }
+
+  return result;
+}
+
+// const uniqResult = uniqArrItem([1, 2, 1, 3, 4, 5, 2, 3]);
+// const uniqResult2 = uniqArrItem([1, 1, 1, 1, 1, 1, 1, 1]);
+// const uniqResult3 = uniqArrItem([1, 3, 5, 3, 4, 5, 2, 333, 22, 44]);
+// console.log(uniqResult);
+// console.log(uniqResult2);
+// console.log(uniqResult3);
+
+function uniqArrItem(arr) {
+  return arr.filter(function (el, i) {
+    return !arr.includes(el, i + 1);
+  });
+}
+
+const uniqArrItem = (arr) =>
+  arr.filter((el, i, array) => !array.includes(el, i + 1));
+
+const uniqResult = uniqArrItem([1, 2, 1, 3, 4, 5, 2, 3]);
+console.log(uniqResult);
