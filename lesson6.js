@@ -250,3 +250,80 @@ function uniqArrItem(itemArray) {
 // };
 
 // console.log(thirdTry(multiArr));
+
+// const number = 1;
+// const numberTwo = number;
+
+// console.log(numberTwo);
+
+// const increment = (a) => {
+//   a += 1;
+// };
+
+// console.log(number, "one");
+// increment(number);
+// console.log(number, "two");
+
+// const arr = [1, 2, 3, 4];
+
+// const arr2 = arr;
+
+// const arrPush = (arr) => {
+//   arr.push(5);
+// };
+
+// console.log(arr, "one");
+// arrPush(arr);
+// console.log(arr, "two");
+// console.log(arr2);
+
+// const user = { name: "Alex" };
+
+// const user2 = user;
+
+// user.age = 18;
+// user2.name = "Ivan";
+
+// console.log(user);
+// console.log(user2);
+
+// const user = { name: "Alex" };
+
+// const user2 = Object.assign({}, user, { favoriteColor: "red", city: "London" });
+// const user2 = { ...user, favoriteColor: "red", city: "London" };
+
+// // user.age = 18;
+// // user2.name = "Ivan";
+
+// // console.log(user);
+// // console.log(user2);
+
+// const arr = [1, 2, 3];
+
+// const arr2 = [...arr];
+
+// arr.push(4);
+
+// console.log(arr);
+// console.log(arr2);
+
+const arr = [1, 2, 3, 4];
+
+const arrPush = (arr) => {
+  const arrNew = [...arr];
+  arrNew.push(5);
+};
+
+console.log(arr, "one");
+arrPush(arr);
+console.log(arr, "two");
+
+const user = { name: "Alex", age: 18 };
+
+const user2 = JSON.parse(JSON.stringify(user));
+
+user.name = "Ivan";
+user2.age = 20;
+
+console.log(user);
+console.log(user2);
