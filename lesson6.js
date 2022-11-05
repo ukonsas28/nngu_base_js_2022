@@ -187,3 +187,31 @@ const uniqArrItem = (arr) =>
 
 const uniqResult = uniqArrItem([1, 2, 1, 3, 4, 5, 2, 3]);
 console.log(uniqResult);
+
+//3
+const arr_3 = [1, 2, 3];
+const arr_4 = [1, 2, 3];
+
+const twoArr = (arr1, arr2) =>
+  arr1.length === arr2.length && arr1.every((e, ind) => e === arr2[ind]);
+
+console.log(twoArr(arr_3, arr_4));
+//3.1
+const compareArr = (arrA, arrB) => {
+  if (arrA.length != arrB.length) return false;
+  for (let i = 0; i < arrA.length; i++) {
+    if (arrA[i] != arrB[i]) return false;
+  }
+  return true;
+};
+
+// 3.2
+const compareArray = (arr1, arr2) => {
+  const str1 = arr1.toString();
+  const str2 = arr2.toString();
+
+  if (str1.length === str2.length) {
+    return str1 === str2;
+  }
+  return false;
+};
