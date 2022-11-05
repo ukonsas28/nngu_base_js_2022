@@ -176,42 +176,77 @@ function uniqArrItem(itemArray) {
 // console.log(uniqResult2);
 // console.log(uniqResult3);
 
-function uniqArrItem(arr) {
-  return arr.filter(function (el, i) {
-    return !arr.includes(el, i + 1);
-  });
-}
+// function uniqArrItem(arr) {
+//   return arr.filter(function (el, i) {
+//     return !arr.includes(el, i + 1);
+//   });
+// }
 
-const uniqArrItem = (arr) =>
-  arr.filter((el, i, array) => !array.includes(el, i + 1));
+// const uniqArrItem = (arr) =>
+//   arr.filter((el, i, array) => !array.includes(el, i + 1));
 
-const uniqResult = uniqArrItem([1, 2, 1, 3, 4, 5, 2, 3]);
-console.log(uniqResult);
+// const uniqResult = uniqArrItem([1, 2, 1, 3, 4, 5, 2, 3]);
+// console.log(uniqResult);
 
-//3
-const arr_3 = [1, 2, 3];
-const arr_4 = [1, 2, 3];
+// //3
+// const arr_3 = [1, 2, 3];
+// const arr_4 = [1, 2, 3];
 
-const twoArr = (arr1, arr2) =>
-  arr1.length === arr2.length && arr1.every((e, ind) => e === arr2[ind]);
+// const twoArr = (arr1, arr2) =>
+//   arr1.length === arr2.length && arr1.every((e, ind) => e === arr2[ind]);
 
-console.log(twoArr(arr_3, arr_4));
-//3.1
-const compareArr = (arrA, arrB) => {
-  if (arrA.length != arrB.length) return false;
-  for (let i = 0; i < arrA.length; i++) {
-    if (arrA[i] != arrB[i]) return false;
-  }
-  return true;
-};
+// console.log(twoArr(arr_3, arr_4));
+// //3.1
+// const compareArr = (arrA, arrB) => {
+//   if (arrA.length != arrB.length) return false;
+//   for (let i = 0; i < arrA.length; i++) {
+//     if (arrA[i] != arrB[i]) return false;
+//   }
+//   return true;
+// };
 
 // 3.2
-const compareArray = (arr1, arr2) => {
-  const str1 = arr1.toString();
-  const str2 = arr2.toString();
+// const compareArray = (arr1, arr2) => {
+//   const str1 = arr1.toString();
+//   const str2 = arr2.toString();
 
-  if (str1.length === str2.length) {
-    return str1 === str2;
-  }
-  return false;
-};
+//   if (str1.length === str2.length) {
+//     return str1 === str2;
+//   }
+//   return false;
+// };
+
+// console.log(["Ivan", "Alex", "Tony"].toString(), typeof [1, 2, 3].toString());
+// console.log(["Alex", "Ivan", "Tony"].toString(), typeof [1, 2, 3].toString());
+// console.log(compareArray([1, 2, 3], [1, 2, 3]));
+
+// const multiArr = [1, 2, [3, 4, 5, [6, 7, 8]], 9, 10, [11, 12, [13, 14, [15]]]];
+
+// const firstTry = (arr) =>
+//   arr
+//     .toString()
+//     .split(",")
+//     .map((el) => +el);
+
+// console.log(firstTry(multiArr));
+
+// const secondTry = (arr) => arr.flat(Infinity);
+// console.log(secondTry(multiArr));
+
+// const thirdTry = (arr) => {
+//   let haveArr = false;
+
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (Array.isArray(arr[i])) {
+//       haveArr = true;
+//     }
+//   }
+
+//   if (haveArr) {
+//     return thirdTry(arr.flat());
+//   }
+
+//   return arr;
+// };
+
+// console.log(thirdTry(multiArr));
