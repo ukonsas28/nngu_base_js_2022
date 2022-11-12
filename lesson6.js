@@ -307,23 +307,200 @@ function uniqArrItem(itemArray) {
 // console.log(arr);
 // console.log(arr2);
 
-const arr = [1, 2, 3, 4];
+// const arr = [1, 2, 3, 4];
 
-const arrPush = (arr) => {
-  const arrNew = [...arr];
-  arrNew.push(5);
-};
+// const arrPush = (arr) => {
+//   const arrNew = [...arr];
+//   arrNew.push(5);
+// };
 
-console.log(arr, "one");
-arrPush(arr);
-console.log(arr, "two");
+// console.log(arr, "one");
+// arrPush(arr);
+// console.log(arr, "two");
 
-const user = { name: "Alex", age: 18 };
+// const user = { name: "Alex", age: 18 };
 
-const user2 = JSON.parse(JSON.stringify(user));
+// const user2 = JSON.parse(JSON.stringify(user));
 
-user.name = "Ivan";
-user2.age = 20;
+// user.name = "Ivan";
+// user2.age = 20;
 
-console.log(user);
-console.log(user2);
+// console.log(user);
+// console.log(user2);
+
+// const infinitySum = (a, b, ...arg) => {
+//   return a + b + arg.reduce((accum, cur) => accum + cur, 0);
+// };
+
+// console.log(infinitySum(1, 23));
+
+// const user = { name: "Alex", age: 18, city: "London" };
+// // const user2 = { name: "Ivan", age: 18, city: "London" };
+
+// const userName = user.name;
+// const userAge = user.age;
+// console.log(userName, "userName");
+
+// const { name, ...restParams } = user;
+// // const { name: name2, age: age2 } = user2;
+// console.log(name, "name");
+// console.log(restParams, "restParams");
+
+// const arraySum = (arr) => {
+//   let result = 0;
+
+//   for (let value of arr) {
+//     result += value;
+//   }
+
+//   return result;
+// };
+
+// console.log(arraySum([1, 2, 3, 4, 5, 6, 7, 8]));
+
+// const arr = ["Ivan", "Alex", "Tony"];
+// const obj = { name: "Alex", age: 18 };
+
+// for (let value in obj) {
+//   console.log(obj[value]);
+// }
+
+//Напишите код, который получает из массива чисел новый массив,
+//содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
+
+// const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const sumSeven = (arr) => {
+//   const result = [];
+
+//   for (let i of arr) {
+//     for (let j of arr) {
+//       if (i + j === 7 && !result.includes(`${j}:${i}`)) {
+//         result.push(`${i}:${j}`);
+//       }
+//     }
+//   }
+
+//   return result;
+// };
+
+// console.log(sumSeven(arr));
+
+//Напишите код, создающий массив, который будет состоять из строк, состоящих из предыдущего,
+//текущего и следующего символа строки str.
+
+// const str = "JavaScript";
+
+// const strSymbols = (str) => {
+//   const result = [];
+
+//   const { length } = str;
+
+//   for (let i = 0; i < length; i += 1) {
+//     if (i === 0) {
+//       result.push(str.slice(0, 2));
+//     } else if (i === length - 1) {
+//       result.push(str.slice(-2));
+//     } else {
+//       result.push(str.slice(i - 1, i + 2));
+//     }
+//   }
+
+//   return result;
+// };
+
+// console.log(strSymbols(str));
+
+// const user = { name: "Alex", age: "26", city: "NN" };
+
+// const userName = user.name;
+// const userAge = user.age;
+
+// const { name, ...restObj } = user;
+
+// console.log(userName, userAge, restObj);
+
+//Напишите код, объединяющий три массива цифр, и располагающий цифры, в полученном массиве,
+// в порядке убывания их значений через пробел.
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [7, 8, 9];
+// const arr3 = [4, 5, 6];
+
+// const sortArr = (arr1, arr2, arr3) =>
+//   [...arr1, ...arr2, ...arr3]
+//     .sort((a, b) => b - a)
+//     .join(" ")
+//     .split();
+
+// console.log(sortArr(arr1, arr2, arr3));
+
+//Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+
+// const arr = [1, 2, 3, 45, 5, 6, 7, 85, 9];
+
+// const customReverce = (arr) => {
+//   const result = [];
+
+//   for (let value of arr) {
+//     result.unshift(value);
+//   }
+//   return result;
+// };
+
+// console.log(customReverce(arr));
+
+//Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить,
+//чтобы в сумме получилось больше 10-ти.
+
+// const arr = [10, 2, 3, 4, -5, 6, 7, 8, 9];
+
+// const sumMoreTen = (arr) => {
+//   let lastIndex;
+//   arr.reduce((prev, cur, index) => {
+//     if (prev + cur <= 10) {
+//       lastIndex = index;
+//       return prev + cur;
+//     }
+//   }, 0);
+
+//   if (lastIndex === 0) {
+//     return lastIndex + 1;
+//   }
+//   if (typeof lastIndex === "undefined") {
+//     return 1;
+//   }
+//   return lastIndex + 2;
+// };
+
+// console.log(sumMoreTen(arr));
+
+//Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19].
+// Использую метод reduce() напишите функцию currentSums(numbers),
+//которая возвращает новый массив из такого же числа элементов, в котором
+//на каждой позиции будет находиться сумма
+// элементов массива numbers до этой позиции включительно.
+
+// const numbers = [0, 2, 3, 5, 7, 11, 13, 17, 19, 23];
+// const currentSums = (arr) => {
+//   const result = [];
+
+//   arr.reduce((prev, cur) => {
+//     result.push(prev + cur);
+//     return prev + cur;
+//   }, 0);
+
+//   return result;
+// };
+
+// console.log(currentSums(numbers));
+
+// const numbers = [2, 3, 5, 7, 11, 13, 17, 19];
+
+// const currentSums = (numbers) => {
+//   let result = [];
+//   numbers.reduce((pre, cur, ind) => (result[ind] = pre + cur), 0);
+//   return result;
+// };
+
+// console.log(currentSums(numbers));
