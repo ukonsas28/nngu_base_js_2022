@@ -504,3 +504,5 @@ function uniqArrItem(itemArray) {
 // };
 
 // console.log(currentSums(numbers));
+
+
