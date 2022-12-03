@@ -1,3 +1,5 @@
+@import "./main.css";
+
 body {
   width: 100vw;
   height: 100vh;
@@ -56,4 +58,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 500px;
+}
+
+.active {
+  background-color: red;
 }
