@@ -28,25 +28,25 @@
 
 // console.log("end");
 
-// const request = () => {
-//   console.log("init request");
+const request = () => {
+  console.log("init request");
 
-//   setTimeout(() => {
-//     console.log("create response");
+  setTimeout(() => {
+    console.log("create response");
 
-//     const response = {
-//       name: "Alex",
-//       age: 26,
-//     };
+    const response = {
+      name: "Alex",
+      age: 26,
+    };
 
-//     setTimeout(() => {
-//       response.modified = true;
-//       console.log(response);
-//     }, 2000);
-//   }, 2000);
-// };
+    setTimeout(() => {
+      response.modified = true;
+      console.log(response);
+    }, 2000);
+  }, 2000);
+};
 
-// request();
+request();
 
 const requestOne = () => {
   console.log("init request");
@@ -74,5 +74,12 @@ const requestTwo = (result) => {
 
 requestOne()
   .then((result) => requestTwo(result))
-  .then((response) => console.log(response))
-  .finally(() => console.log("finally"));
+  .then((response) => console.log(response));
+
+const requestFunc = async () => {
+  const result = await requestOne();
+  const response = await requestTwo(result);
+  console.log(response);
+};
+
+requestFunc();
